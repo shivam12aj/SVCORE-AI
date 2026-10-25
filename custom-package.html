@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Custom Package — TeamOnlyGrowth</title>
+<meta name="description" content="Need a mix of services? Tell us your requirement and get a custom package quote from TeamOnlyGrowth." />
+<link rel="icon" href="/assets/teamonlygrowth-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head text-center" style="margin:0 auto 40px;">
+        <span class="eyebrow">Custom Package</span>
+        <h1>Need a mix of services?</h1>
+        <p style="margin:0 auto;">If your business needs more than one service working together, tell us what you're trying to achieve and we'll put together a custom quote — no payment until you approve it.</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-msg"></div>
+        <form data-lead-form="custom-package" data-submit-label="Request custom quote">
+          <div class="field"><label for="p-name">Full name</label><input id="p-name" name="full_name" required /></div>
+          <div class="field"><label for="p-whatsapp">WhatsApp number</label><input id="p-whatsapp" name="whatsapp" required /></div>
+          <div class="field"><label for="p-business">Business / brand name</label><input id="p-business" name="business_name" /></div>
+          <div class="field">
+            <label for="p-services">Which services do you need?</label>
+            <select id="p-services" name="services_needed" multiple size="8">
+              <option value="meta-ads">Meta Ads</option>
+              <option value="google-ads">Google Ads</option>
+              <option value="lead-generation">Lead Generation</option>
+              <option value="social-media-marketing">Social Media Marketing</option>
+              <option value="seo">SEO</option>
+              <option value="website-development">Website Development</option>
+              <option value="whatsapp-marketing">WhatsApp Marketing</option>
+              <option value="content-creation">Content Creation</option>
+            </select>
+            <p class="hint">Hold Ctrl/Cmd to select multiple.</p>
+          </div>
+          <div class="field"><label for="p-budget">Approximate monthly budget (optional)</label><input id="p-budget" name="marketing_budget" /></div>
+          <div class="field"><label for="p-goal">What are you trying to achieve?</label><textarea id="p-goal" name="main_goal" rows="4" required></textarea></div>
+          <button class="btn btn-primary btn-block" type="submit">Request custom quote</button>
+          <a class="btn btn-whatsapp btn-block" data-lead-fallback href="#" style="display:none; margin-top:10px;" target="_blank" rel="noopener">Send via WhatsApp instead</a>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/partials.js"></script>
+<script type="module" src="/js/analytics.js"></script>
+<script type="module" src="/js/leads.js"></script>
+</body>
+</html>

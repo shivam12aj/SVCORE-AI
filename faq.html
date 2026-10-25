@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FAQ — TeamOnlyGrowth</title>
+<meta name="description" content="Frequently asked questions about TeamOnlyGrowth services, pricing, payments and process." />
+<link rel="icon" href="/assets/teamonlygrowth-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h1>Frequently asked questions</h1>
+        <p>Looking for pricing on a specific service? Each service's detail page has its own FAQs too.</p>
+      </div>
+      <div class="faq-list" id="faq-root" style="max-width:760px;"></div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/partials.js"></script>
+<script type="module" src="/js/analytics.js"></script>
+<script type="module">
+  import { faqs } from "/config/faq.js";
+  document.querySelector("#faq-root").innerHTML = faqs.map(f => `
+    <details><summary>${f.q}</summary><p>${f.a}</p></details>`).join("");
+</script>
+</body>
+</html>

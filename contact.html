@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — TeamOnlyGrowth</title>
+<meta name="description" content="Contact TeamOnlyGrowth via WhatsApp, email, or the form below." />
+<link rel="icon" href="/assets/teamonlygrowth-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head text-center" style="margin:0 auto 40px;">
+        <span class="eyebrow">Contact</span>
+        <h1>Let's talk about your business.</h1>
+        <p style="margin:0 auto;">WhatsApp is the fastest way to reach us. Prefer email or a form? That works too.</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-msg"></div>
+        <div class="hero-ctas" style="margin-bottom:22px;">
+          <a class="btn btn-whatsapp btn-block" data-whatsapp="Hi TeamOnlyGrowth, I'd like to get in touch." href="#">WhatsApp us</a>
+          <a class="btn btn-outline btn-block" href="mailto:teamonlygrowth@gmail.com">Email us</a>
+        </div>
+        <form data-lead-form="contact" data-submit-label="Send message">
+          <div class="field"><label for="c-name">Full name</label><input id="c-name" name="full_name" required /></div>
+          <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" required /></div>
+          <div class="field"><label for="c-whatsapp">WhatsApp number</label><input id="c-whatsapp" name="whatsapp" required /></div>
+          <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="4" required></textarea></div>
+          <button class="btn btn-primary btn-block" type="submit">Send message</button>
+          <a class="btn btn-whatsapp btn-block" data-lead-fallback href="#" style="display:none; margin-top:10px;" target="_blank" rel="noopener">Send via WhatsApp instead</a>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/partials.js"></script>
+<script type="module" src="/js/analytics.js"></script>
+<script type="module" src="/js/leads.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TeamOnlyGrowth \u2014 Your Growth. Our Strategy.</title>
+<meta name="description" content="TeamOnlyGrowth is a digital marketing agency offering Meta Ads, Google Ads, SEO, Lead Generation, Website Development and more \u2014 led by founder Shivam Vishwakarma." />
+<link rel="canonical" href="https://teamonlygrowth.netlify.app/index.html" />
+<meta property="og:title" content="TeamOnlyGrowth \u2014 Your Growth. Our Strategy." />
+<meta property="og:description" content="Digital marketing that turns attention into growth: Meta Ads, Google Ads, SEO, Lead Generation, Website Development, WhatsApp Marketing and Content Creation." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/assets/teamonlygrowth-logo.png" />
+<link rel="icon" href="/assets/teamonlygrowth-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"TeamOnlyGrowth","url":"https://teamonlygrowth.netlify.app/","logo":"/assets/teamonlygrowth-logo.png","founder":{"@type":"Person","name":"Shivam Vishwakarma"},"email":"teamonlygrowth@gmail.com"}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <div class="kicker">Digital Marketing Agency</div>
+        <h1>Digital Marketing That Turns Attention Into Growth.</h1>
+        <p class="sub">More Visibility \u2022 More Leads \u2022 More Sales</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="/services.html" data-track-explore>Explore Services</a>
+          <a class="btn btn-whatsapp" data-whatsapp="Hi TeamOnlyGrowth, I'd like to talk about growing my business." href="#">Talk on WhatsApp</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><div class="num">\u20B94L+</div><div class="lbl">Revenue Generated</div></div>
+          <div class="stat"><div class="num">120+</div><div class="lbl">Team Members Led</div></div>
+          <div class="stat"><div class="num">2</div><div class="lbl">Live Tech Products</div></div>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img data-founder-photo src="/assets/founder-photo.jpg" alt="Shivam Vishwakarma, Founder of TeamOnlyGrowth" />
+        <figcaption><strong data-founder-name>Shivam Vishwakarma</strong><span data-founder-title>Founder, TeamOnlyGrowth</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section--cool">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Services</span>
+        <h2>Everything to get found, get leads, and get paid.</h2>
+        <p>Eight core services, each with clear pricing and a plain-language breakdown of what's included.</p>
+      </div>
+      <div class="service-grid" id="home-services-preview"></div>
+      <p style="margin-top:24px;"><a class="btn btn-outline" href="/services.html">See all 8 services \u2192</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="founder-layout">
+        <div class="founder-photo-frame">
+          <img data-founder-photo src="/assets/founder-photo.jpg" alt="Shivam Vishwakarma" />
+        </div>
+        <div>
+          <span class="eyebrow">Founder</span>
+          <h2>Built and run by one person who answers your messages.</h2>
+          <p><span data-founder-name>Shivam Vishwakarma</span> leads TeamOnlyGrowth end to end \u2014 from strategy to setup to your WhatsApp inbox. No account managers, no hand-offs.</p>
+          <div class="founder-cred">
+            <a href="/founder.html">Read more \u2192</a>
+            <a href="https://www.linkedin.com/in/shivam-vishwakarma-222790291/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://youtube.com/@teamonlygrowth?si=BLKWk2F7bK9hiT0j" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink">
+    <div class="container text-center">
+      <h2>Not sure which service fits your business?</h2>
+      <p style="margin:0 auto 26px;">Ask the TeamOnlyGrowth AI assistant, or message us directly \u2014 we'll point you the right way.</p>
+      <div class="hero-ctas" style="justify-content:center;">
+        <a class="btn btn-primary" href="/services.html">Explore Services</a>
+        <a class="btn btn-whatsapp" data-whatsapp="Hi TeamOnlyGrowth, I'm not sure which service is right for me." href="#">Talk on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script type="module">
+  import "/js/partials.js";
+  import "/js/analytics.js";
+  import { services } from "/config/services.js";
+  const preview = document.querySelector("#home-services-preview");
+  preview.innerHTML = services.slice(0,4).map(s => `
+    <article class="service-card">
+      <h4>${s.name}</h4>
+      <span class="price">${s.priceLabel}</span>
+      <p>${s.summary}</p>
+      <div class="card-actions"><a class="btn btn-primary btn-sm" href="/service.html?id=${s.id}">View details</a></div>
+    </article>`).join("");
+  document.querySelector("[data-track-explore]")?.addEventListener("click", async () => {
+    const { track } = await import("/js/app.js");
+    track("get_started_click", { source: "hero" });
+  });
+</script>
+</body>
+</html>

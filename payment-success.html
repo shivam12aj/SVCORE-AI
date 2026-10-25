@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Payment Successful — TeamOnlyGrowth</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="/assets/teamonlygrowth-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <section class="section text-center">
+    <div class="container" style="max-width:520px;">
+      <div class="eyebrow">Payment received</div>
+      <h1>You're all set 🎉</h1>
+      <p id="success-copy">Your payment has been verified and your project has moved to "Paid." We'll be in touch shortly to begin work.</p>
+      <div class="hero-ctas" style="justify-content:center; margin-top:24px;">
+        <a class="btn btn-primary" href="/dashboard.html?section=projects">View my project</a>
+        <a class="btn btn-whatsapp" data-whatsapp="Hi TeamOnlyGrowth, I just completed payment — excited to get started!" href="#">Say hi on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/partials.js"></script>
+<script type="module" src="/js/analytics.js"></script>
+<script type="module">
+  import { getService } from "/config/services.js";
+  const id = new URLSearchParams(location.search).get("service");
+  const service = getService(id);
+  if (service) {
+    document.querySelector("#success-copy").textContent =
+      `Your payment for ${service.name} has been verified and your project has moved to "Paid." We'll be in touch shortly to begin work.`;
+  }
+</script>
+</body>
+</html>

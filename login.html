@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Log in — TeamOnlyGrowth</title>
+<link rel="icon" href="/assets/teamonlygrowth-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head text-center" style="margin:0 auto 32px;">
+        <span class="eyebrow">Welcome back</span>
+        <h1>Log in to your account</h1>
+      </div>
+      <div class="form-card">
+        <div class="form-msg"></div>
+        <form id="login-form">
+          <div class="field"><label for="l-email">Email</label><input id="l-email" type="email" name="email" required /></div>
+          <div class="field"><label for="l-password">Password</label><input id="l-password" type="password" name="password" required /></div>
+          <button class="btn btn-primary btn-block" type="submit">Log in</button>
+          <a class="btn btn-whatsapp btn-block" data-wa-fallback href="#" style="display:none; margin-top:10px;" target="_blank" rel="noopener">Talk on WhatsApp instead</a>
+        </form>
+        <p class="form-foot"><a href="/forgot-password.html">Forgot password?</a> &middot; New here? <a href="/signup.html" id="signup-link">Create an account</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="/js/partials.js"></script>
+<script type="module" src="/js/analytics.js"></script>
+<script type="module" src="/js/auth.js"></script>
+<script>
+  const svc = new URLSearchParams(location.search).get("service");
+  if (svc) document.querySelector("#signup-link").href = `/signup.html?service=${svc}`;
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://teamonlygrowth.netlify.app/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/services.html</loc><priority>0.9</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/service.html?id=meta-ads</loc><priority>0.8</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/service.html?id=google-ads</loc><priority>0.8</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/service.html?id=lead-generation</loc><priority>0.8</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/service.html?id=social-media-marketing</loc><priority>0.8</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/service.html?id=seo</loc><priority>0.8</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/service.html?id=website-development</loc><priority>0.8</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/service.html?id=whatsapp-marketing</loc><priority>0.8</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/service.html?id=content-creation</loc><priority>0.8</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/process.html</loc><priority>0.6</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/why-us.html</loc><priority>0.6</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/founder.html</loc><priority>0.6</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/portfolio.html</loc><priority>0.5</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/faq.html</loc><priority>0.5</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/custom-package.html</loc><priority>0.5</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/contact.html</loc><priority>0.6</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/pages/privacy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/pages/terms.html</loc><priority>0.3</priority></url>
+  <url><loc>https://teamonlygrowth.netlify.app/pages/refund.html</loc><priority>0.3</priority></url>
+</urlset>

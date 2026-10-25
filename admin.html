@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Admin — TeamOnlyGrowth</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="/assets/teamonlygrowth-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="dash-shell">
+  <aside class="dash-side" id="admin-nav">
+    <a href="/admin.html?section=overview" data-section="overview">Overview</a>
+    <a href="/admin.html?section=leads" data-section="leads">Leads</a>
+    <a href="/admin.html?section=customers" data-section="customers">Customers</a>
+    <a href="/admin.html?section=enquiries" data-section="enquiries">Enquiries</a>
+    <a href="/admin.html?section=quotes" data-section="quotes">Quotes</a>
+    <a href="/admin.html?section=orders" data-section="orders">Orders</a>
+    <a href="/admin.html?section=payments" data-section="payments">Payments</a>
+    <a href="/admin.html?section=projects" data-section="projects">Projects</a>
+    <a href="/admin.html?section=ai" data-section="ai">AI Conversations</a>
+    <a href="/admin.html?section=notifications" data-section="notifications">Notifications</a>
+    <a href="/admin.html?section=analytics" data-section="analytics">Analytics</a>
+    <a href="/admin.html?section=services" data-section="services">Services</a>
+    <a href="/admin.html?section=faq" data-section="faq">FAQ</a>
+    <a href="/admin.html?section=settings" data-section="settings">Settings</a>
+    <a href="#" data-logout>Logout</a>
+  </aside>
+  <section class="dash-main">
+    <p class="muted" style="margin-bottom:4px;">Admin — <strong data-user-email>—</strong></p>
+    <div data-admin="overview"></div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script>
+  const section = new URLSearchParams(location.search).get("section") || "overview";
+  document.querySelector("[data-admin]").dataset.admin = section;
+  document.querySelectorAll("#admin-nav a[data-section]").forEach((a) => {
+    if (a.dataset.section === section) a.classList.add("active");
+  });
+</script>
+<script type="module" src="/js/partials.js"></script>
+<script type="module" src="/js/auth.js"></script>
+<script type="module" src="/js/admin.js"></script>
+</body>
+</html>
